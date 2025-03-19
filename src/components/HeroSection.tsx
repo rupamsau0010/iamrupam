@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight, Database, Server, Cloud } from 'lucide-react';
+import { ArrowRight, Database, Server, Cloud, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -139,6 +139,11 @@ const HeroSection = () => {
             </Button>
             <Button asChild variant="outline" size="lg">
               <a href="#contact">Get in Touch</a>
+            </Button>
+            <Button asChild variant="secondary" size="lg" className="gap-2">
+              <a href="/resume.pdf" download>
+                Download Resume <Download size={16} />
+              </a>
             </Button>
           </div>
           
