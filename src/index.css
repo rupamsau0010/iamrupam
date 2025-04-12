@@ -7,43 +7,43 @@
 
 @layer base {
   :root {
-    --background: 210 50% 98%;
-    --foreground: 222 47% 11%;
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 222 45% 11%;
+    --popover-foreground: 210 40% 98%;
 
     --primary: 210 100% 50%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222 47% 11.2%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
     --accent: 186 75% 56%;
-    --accent-foreground: 222 47% 11.2%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 224.3 76.3% 48%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 20%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -57,17 +57,17 @@
   }
 
   ::selection {
-    @apply bg-azure-200/50 text-foreground;
+    @apply bg-azure-700/50 text-foreground;
   }
 }
 
 @layer components {
   .glass {
-    @apply bg-white/50 backdrop-blur-md border border-white/20 shadow-sm;
+    @apply bg-black/50 backdrop-blur-md border border-white/10 shadow-sm;
   }
   
   .glass-card {
-    @apply bg-white/70 backdrop-blur-lg border border-white/30 shadow-lg rounded-2xl transition-all duration-300 hover:shadow-xl hover:bg-white/80;
+    @apply bg-black/40 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl transition-all duration-300 hover:shadow-xl hover:bg-black/30;
   }
   
   .section-container {
@@ -91,14 +91,14 @@
   }
   
   .skill-chip {
-    @apply px-3 py-1 rounded-full text-sm font-medium bg-azure-100 text-azure-800 border border-azure-200;
+    @apply px-3 py-1 rounded-full text-sm font-medium bg-azure-900/60 text-azure-200 border border-azure-700/60;
   }
 
   .data-grid {
     background-size: 40px 40px;
     background-image: 
-      linear-gradient(to right, rgba(176, 219, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(176, 219, 255, 0.1) 1px, transparent 1px);
+      linear-gradient(to right, rgba(50, 100, 150, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(50, 100, 150, 0.1) 1px, transparent 1px);
   }
   
   .data-dot {

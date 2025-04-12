@@ -93,13 +93,13 @@ const ExperienceSection = () => {
     <section id="experience" className="py-20">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-16 section-animate" ref={sectionRef}>
-          <span className="inline-block px-3 py-1 bg-azure-100 text-azure-800 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium mb-4 border border-azure-700/30">
             Professional Journey
           </span>
           <h2 className="heading-lg">
             Work Experience
           </h2>
-          <p className="mt-6 text-gray-600">
+          <p className="mt-6 text-gray-400">
             A track record of success in designing and implementing data solutions that drive business value.
           </p>
         </div>
@@ -109,27 +109,27 @@ const ExperienceSection = () => {
             <div key={exp.id} className={`glass-card p-8 hover:shadow-lg transition-shadow ${index === 0 ? 'border-t-4 border-t-azure-500' : ''}`}>
               <div className="md:flex justify-between items-start">
                 <div className="md:w-1/3 mb-4 md:mb-0 md:pr-6">
-                  <div className="flex items-center text-azure-600 mb-2">
+                  <div className="flex items-center text-azure-400 mb-2">
                     <Calendar className="h-4 w-4 mr-2" />
                     <span className="text-sm font-medium">{exp.duration}</span>
                   </div>
-                  <div className="flex items-center text-gray-600 mb-2">
+                  <div className="flex items-center text-gray-400 mb-2">
                     <Building className="h-4 w-4 mr-2" />
                     <span className="text-sm">{exp.company}</span>
                   </div>
-                  <div className="flex items-center text-gray-600 mb-2">
+                  <div className="flex items-center text-gray-300 mb-2">
                     <Briefcase className="h-4 w-4 mr-2" />
                     <span className="text-sm font-semibold">{exp.role}</span>
                   </div>
                 </div>
                 
                 <div className="md:w-2/3">
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-300 mb-4">
                     {exp.description}
                   </p>
                   
                   <div className="mt-4">
-                    <h4 className="font-medium text-azure-800 flex items-center mb-3">
+                    <h4 className="font-medium text-azure-300 flex items-center mb-3">
                       <Lightbulb className="h-4 w-4 mr-2" />
                       Key Responsibilities
                     </h4>
@@ -137,7 +137,7 @@ const ExperienceSection = () => {
                       {exp.achievements.map((achievement, i) => (
                         <li key={i} className="flex items-start">
                           <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2"></div>
-                          <span className="text-gray-700">{achievement}</span>
+                          <span className="text-gray-300">{achievement}</span>
                         </li>
                       ))}
                     </ul>

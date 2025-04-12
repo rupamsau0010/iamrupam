@@ -118,29 +118,29 @@ const HeroSection = () => {
       <div className="container relative z-10">
         <div className="max-w-3xl">
           <div className="inline-block animate-fade-in opacity-0" style={{ animationDelay: '0.1s' }}>
-            <span className="px-3 py-1 bg-azure-100 text-azure-800 rounded-full text-sm font-medium">
+            <span className="px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium border border-azure-700/30">
               Azure Data Engineer
             </span>
           </div>
           
           <h1 className="heading-xl mt-6 animate-fade-in opacity-0" style={{ animationDelay: '0.3s' }}>
-            Rupam Sau: Transforming <span className="text-azure-600">Data</span> into Valuable Insights
+            Rupam Sau: Transforming <span className="text-azure-400">Data</span> into Valuable Insights
           </h1>
           
-          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
+          <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>
             Specialized in building scalable data pipelines, ETL processes, and analytics solutions in the Azure Cloud ecosystem.
           </p>
           
           <div className="mt-8 flex flex-wrap gap-4 animate-fade-in opacity-0" style={{ animationDelay: '0.7s' }}>
-            <Button asChild size="lg" className="gap-2">
+            <Button asChild size="lg" className="gap-2 bg-azure-600 hover:bg-azure-700">
               <a href="#projects">
                 View Projects <ArrowRight size={16} />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-azure-700/50 hover:bg-azure-900/40">
               <a href="#contact">Get in Touch</a>
             </Button>
-            <Button asChild variant="secondary" size="lg" className="gap-2">
+            <Button asChild variant="secondary" size="lg" className="gap-2 bg-secondary hover:bg-secondary/80">
               <a href="/resume.pdf" download>
                 Download Resume <Download size={16} />
               </a>
@@ -149,15 +149,15 @@ const HeroSection = () => {
           
           <div className="mt-16 grid grid-cols-3 gap-6 animate-fade-in opacity-0" style={{ animationDelay: '0.9s' }}>
             <div className="glass-card p-4 flex flex-col items-center justify-center text-center">
-              <Database className="h-8 w-8 text-azure-600 mb-2" />
+              <Database className="h-8 w-8 text-azure-400 mb-2" />
               <h3 className="font-medium">Data Engineering</h3>
             </div>
             <div className="glass-card p-4 flex flex-col items-center justify-center text-center">
-              <Cloud className="h-8 w-8 text-azure-600 mb-2" />
+              <Cloud className="h-8 w-8 text-azure-400 mb-2" />
               <h3 className="font-medium">Azure Cloud</h3>
             </div>
             <div className="glass-card p-4 flex flex-col items-center justify-center text-center">
-              <Server className="h-8 w-8 text-azure-600 mb-2" />
+              <Server className="h-8 w-8 text-azure-400 mb-2" />
               <h3 className="font-medium">Big Data</h3>
             </div>
           </div>
