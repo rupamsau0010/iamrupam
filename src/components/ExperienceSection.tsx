@@ -33,44 +33,58 @@ const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
-      role: 'Senior Data Engineer',
-      company: 'TechInnovate Inc.',
-      duration: 'Jan 2021 - Present',
-      location: 'Seattle, WA',
-      description: 'Leading the design and implementation of enterprise-scale data platforms on Azure.',
+      role: 'Programming Analyst',
+      company: 'Cognizant',
+      duration: 'Oct 2022 - Present',
+      location: 'Kolkata, West Bengal, India',
+      description: 'Working on Azure-based data engineering projects, building scalable data solutions.',
       achievements: [
-        'Architected and delivered a data lake solution that reduced data processing times by 60%',
-        'Led a team of 5 data engineers in migrating on-premise data warehouse to Azure Synapse',
-        'Implemented CI/CD pipelines for automated deployment of data solutions',
-        'Optimized data pipelines resulting in 45% cost reduction in cloud service usage'
+        'Designed and implemented ETL pipelines using Azure Data Factory and Databricks',
+        'Created optimized data solutions leveraging Azure cloud services',
+        'Implemented data quality frameworks to ensure data integrity',
+        'Collaborated with data science teams on predictive analytics solutions'
       ]
     },
     {
       id: 2,
-      role: 'Data Engineer',
-      company: 'DataFlux Solutions',
-      duration: 'Mar 2019 - Dec 2020',
-      location: 'San Francisco, CA',
-      description: 'Designed and developed ETL pipelines using Azure Data Factory, Databricks, and SQL Data Warehouse.',
+      role: 'GenC Next Intern',
+      company: 'Cognizant',
+      duration: 'Feb 2022 - Oct 2022',
+      location: 'Remote',
+      description: 'Trained on various big data technologies including Apache Sqoop and HBase.',
       achievements: [
-        'Built real-time data processing solution using Azure Stream Analytics and Event Hubs',
-        'Developed data quality framework to ensure data integrity across multiple sources',
-        'Created automated reporting dashboard using Power BI, improving decision-making process',
-        'Collaborated with data science team to implement ML models for predictive analytics'
+        'Learned and applied big data concepts in real-world scenarios',
+        'Gained hands-on experience with Apache ecosystem tools',
+        'Participated in data engineering training programs',
+        'Assisted in data integration and processing projects'
       ]
     },
     {
       id: 3,
-      role: 'Data Analyst',
-      company: 'Analytics Co.',
-      duration: 'Jul 2017 - Feb 2019',
-      location: 'Austin, TX',
-      description: 'Performed data analysis and created dashboards using Power BI. Helped migrate on-premise SQL databases to Azure.',
+      role: 'Full-stack Developer',
+      company: 'Freelance',
+      duration: 'Aug 2020 - Present',
+      location: 'Kolkata, West Bengal, India',
+      description: 'Developed web applications using modern JavaScript frameworks and libraries.',
       achievements: [
-        'Analyzed large datasets to identify trends and provide actionable insights',
-        'Developed interactive dashboards that improved executive decision-making',
-        'Assisted in migrating SQL Server databases to Azure SQL Database',
-        'Implemented data transformation processes using SQL and Python'
+        'Built responsive web applications using React.js, Node.js and other frameworks',
+        'Created custom client solutions for various business needs',
+        'Implemented database designs and integrations using SQL',
+        'Managed projects from requirements gathering to deployment'
+      ]
+    },
+    {
+      id: 4,
+      role: 'Back End Developer (Node.js)',
+      company: 'Mentorsity',
+      duration: 'Mar 2021 - May 2021',
+      location: 'Internship',
+      description: 'Worked on backend development using Node.js, with experience in Git and SQL.',
+      achievements: [
+        'Developed RESTful APIs using Node.js and Express',
+        'Implemented database models and queries',
+        'Collaborated with frontend developers for seamless integration',
+        'Participated in code reviews and followed Git workflow'
       ]
     },
   ];
@@ -117,7 +131,7 @@ const ExperienceSection = () => {
                   <div className="mt-4">
                     <h4 className="font-medium text-azure-800 flex items-center mb-3">
                       <Lightbulb className="h-4 w-4 mr-2" />
-                      Key Achievements
+                      Key Responsibilities
                     </h4>
                     <ul className="space-y-2">
                       {exp.achievements.map((achievement, i) => (

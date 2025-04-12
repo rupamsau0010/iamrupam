@@ -119,12 +119,12 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           <div className="inline-block animate-fade-in opacity-0" style={{ animationDelay: '0.1s' }}>
             <span className="px-3 py-1 bg-azure-100 text-azure-800 rounded-full text-sm font-medium">
-              Azure Cloud Data Engineer
+              Azure Data Engineer
             </span>
           </div>
           
           <h1 className="heading-xl mt-6 animate-fade-in opacity-0" style={{ animationDelay: '0.3s' }}>
-            Transforming <span className="text-azure-600">Data</span> into Valuable Insights
+            Rupam Sau: Transforming <span className="text-azure-600">Data</span> into Valuable Insights
           </h1>
           
           <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>

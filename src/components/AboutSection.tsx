@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
@@ -48,13 +47,11 @@ const AboutSection = () => {
             
             <div className="md:w-3/5 space-y-6">
               <p className="text-lg text-gray-700">
-                With over 5 years of experience as a Data Engineer specializing in Azure Cloud technologies, 
-                I've developed a passion for designing and implementing robust data solutions that drive business value.
+                As a Computer Science Engineer, I am passionate about utilizing technology to analyze complex business problems and provide simple and effective solutions. My love for new challenges and continuous learning has enabled me to develop expertise in Big Data technologies.
               </p>
               
               <p className="text-lg text-gray-700">
-                My expertise spans the entire data lifecycle—from ingestion and transformation to storage and analytics. 
-                I excel at building scalable data pipelines, ETL processes, and analytics solutions using Azure's comprehensive suite of services.
+                I specialize in working with cutting-edge technologies such as Azure Databricks, Azure Data Factory, Azure SQL, Azure Synapse Analytics, and ADLS Gen2 to deliver efficient and effective solutions for clients. Through my experience and expertise, I have developed a keen understanding of how to leverage technology to drive business growth and success.
               </p>
               
               <div className="glass-card p-6 mt-8">
@@ -65,7 +62,7 @@ const AboutSection = () => {
                       <div className="w-2 h-2 rounded-full bg-azure-600"></div>
                     </div>
                     <p className="text-gray-700">
-                      <strong className="text-gray-900">User-Centered Design</strong> — Building data solutions with the end-user's needs in mind
+                      <strong className="text-gray-900">Data-Driven Solutions</strong> — Building scalable data architectures that deliver actionable insights
                     </p>
                   </li>
                   <li className="flex items-start">
@@ -73,7 +70,7 @@ const AboutSection = () => {
                       <div className="w-2 h-2 rounded-full bg-azure-600"></div>
                     </div>
                     <p className="text-gray-700">
-                      <strong className="text-gray-900">Scalable Architecture</strong> — Designing systems that can grow with your organization
+                      <strong className="text-gray-900">Cloud-First Engineering</strong> — Leveraging Azure's powerful ecosystem for optimal performance
                     </p>
                   </li>
                   <li className="flex items-start">
@@ -81,7 +78,7 @@ const AboutSection = () => {
                       <div className="w-2 h-2 rounded-full bg-azure-600"></div>
                     </div>
                     <p className="text-gray-700">
-                      <strong className="text-gray-900">Continuous Improvement</strong> — Iterating and refining solutions based on feedback and metrics
+                      <strong className="text-gray-900">Continuous Learning</strong> — Staying updated with the latest technologies and best practices
                     </p>
                   </li>
                   <li className="flex items-start">
@@ -89,7 +86,7 @@ const AboutSection = () => {
                       <div className="w-2 h-2 rounded-full bg-azure-600"></div>
                     </div>
                     <p className="text-gray-700">
-                      <strong className="text-gray-900">Security First</strong> — Implementing robust security measures at every layer
+                      <strong className="text-gray-900">Dynamic Collaboration</strong> — Working with teams to deliver integrated solutions
                     </p>
                   </li>
                 </ul>
@@ -100,31 +97,31 @@ const AboutSection = () => {
                 <div className="relative pl-8 border-l-2 border-azure-200 space-y-8">
                   <div className="relative">
                     <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-500"></div>
-                    <div className="mb-1 text-lg font-semibold">Senior Data Engineer</div>
-                    <div className="text-sm text-gray-500 mb-2">TechInnovate Inc. • 2021 - Present</div>
+                    <div className="mb-1 text-lg font-semibold">Programming Analyst</div>
+                    <div className="text-sm text-gray-500 mb-2">Cognizant • 2022 - Present</div>
                     <p className="text-gray-700">
-                      Leading the design and implementation of enterprise-scale data platforms on Azure.
-                      Successfully delivered solutions that reduced data processing times by 60%.
+                      Working on Azure-based data engineering projects, building ETL processes, 
+                      and implementing data solutions using Azure Databricks and Data Factory.
                     </p>
                   </div>
                   
                   <div className="relative">
                     <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-300"></div>
-                    <div className="mb-1 text-lg font-semibold">Data Engineer</div>
-                    <div className="text-sm text-gray-500 mb-2">DataFlux Solutions • 2019 - 2021</div>
+                    <div className="mb-1 text-lg font-semibold">Full-stack Developer</div>
+                    <div className="text-sm text-gray-500 mb-2">Freelance • 2020 - Present</div>
                     <p className="text-gray-700">
-                      Designed and developed ETL pipelines using Azure Data Factory, Databricks,
-                      and SQL Data Warehouse for clients across finance and healthcare sectors.
+                      Developing web applications using modern JavaScript frameworks and libraries,
+                      creating custom solutions for various client needs.
                     </p>
                   </div>
                   
                   <div className="relative">
                     <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-200"></div>
-                    <div className="mb-1 text-lg font-semibold">Data Analyst</div>
-                    <div className="text-sm text-gray-500 mb-2">Analytics Co. • 2017 - 2019</div>
+                    <div className="mb-1 text-lg font-semibold">Computer Science Engineering</div>
+                    <div className="text-sm text-gray-500 mb-2">Future Institute Of Engineering and Management • 2018 - 2022</div>
                     <p className="text-gray-700">
-                      Performed data analysis and created dashboards using Power BI.
-                      Helped migrate on-premise SQL databases to Azure SQL Database.
+                      Bachelor's degree in Computer Science, focusing on building a strong foundation 
+                      in programming, data structures, and software development.
                     </p>
                   </div>
                 </div>

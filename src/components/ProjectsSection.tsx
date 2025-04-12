@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { ExternalLink, Github, ChevronRight, Database, Server, BarChart, Cloud } from 'lucide-react';
+import { ExternalLink, Github, ChevronRight, Database, Server, BarChart, Cloud, Mail, Activity } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -8,63 +8,67 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const projects = [
   {
     id: 1,
-    title: 'Enterprise Data Lake Architecture',
-    description: 'Designed and implemented a comprehensive data lake solution on Azure to consolidate data from various sources, enabling advanced analytics and ML workloads.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Azure Data Lake', 'Databricks', 'Data Factory', 'Python'],
+    title: 'Formula 1 Racing Data Analytics',
+    description: 'Transformed historical data from Formula 1 racing into meaningful insights using Azure Databricks, Delta Table, Azure SQL, and ADLS Gen2. The project involved tasks from data ingestion to processing and visualization.',
+    image: 'https://images.unsplash.com/photo-1518291344630-4857135fb581?q=80&w=2069&auto=format&fit=crop',
+    tags: ['Azure Databricks', 'Delta Table', 'Azure SQL', 'ADLS Gen2'],
     category: 'data-engineering',
-    icon: Database,
+    icon: BarChart,
     features: [
-      'Multi-layer data architecture (Bronze, Silver, Gold)',
-      'Automated ETL pipelines using Azure Data Factory',
-      'Data quality checks and monitoring',
-      'Integration with Power BI for reporting'
-    ]
+      'Designed and implemented ETL pipelines for race telemetry data',
+      'Created optimized storage schema with Delta Tables',
+      'Built interactive dashboards for race performance analysis',
+      'Implemented real-time data processing for live race insights'
+    ],
+    duration: 'Nov 2022 - Jan 2023'
   },
   {
     id: 2,
-    title: 'Real-time Analytics Dashboard',
-    description: 'Built a real-time analytics solution that processes streaming data from IoT devices and visualizes insights through interactive dashboards.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Stream Analytics', 'Event Hubs', 'Power BI', 'IoT Hub'],
-    category: 'analytics',
-    icon: BarChart,
+    title: 'Email Automation Tool in Azure',
+    description: 'Developed a scheduler-based email automation tool for conditional batch processing of emails using Azure technologies, including ADF, Databricks, ADLS Gen2, and Azure SQL.',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',
+    tags: ['ADF', 'Databricks', 'ADLS Gen2', 'Azure SQL'],
+    category: 'data-engineering',
+    icon: Mail,
     features: [
-      'Real-time data ingestion via Azure Event Hubs',
-      'Stream processing with Azure Stream Analytics',
-      'Interactive Power BI dashboards',
-      'Anomaly detection algorithms'
-    ]
+      'Built email processing workflows using Azure Data Factory',
+      'Implemented conditional logic for email routing and processing',
+      'Created a scheduling system for batch email operations',
+      'Developed monitoring dashboards for email processing metrics'
+    ],
+    duration: 'Feb 2023 - Present'
   },
   {
     id: 3,
-    title: 'Data Warehouse Migration',
-    description: 'Successfully migrated a legacy on-premise data warehouse to Azure Synapse Analytics, improving performance and reducing operational costs.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Azure Synapse', 'SQL DW', 'ETL', 'Data Modeling'],
+    title: 'Covid-19 Data Processing',
+    description: 'Developed a complete data pipeline in the Azure environment for processing Covid-19 data, leveraging ADF, Databricks, ADLS Gen2, and Azure SQL.',
+    image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=2032&auto=format&fit=crop',
+    tags: ['ADF', 'Databricks', 'ADLS Gen2', 'Azure SQL'],
     category: 'data-engineering',
-    icon: Server,
+    icon: Activity,
     features: [
-      'Schema conversion and optimization',
-      'Historical data migration with minimal downtime',
-      'Performance tuning and optimization',
-      'Automated testing framework'
-    ]
+      'Ingested and processed global COVID-19 statistics',
+      'Built streamlined data pipeline for efficient processing',
+      'Created visualizations and dashboards for data insights',
+      'Implemented scalable architecture to handle changing data volumes'
+    ],
+    duration: 'Dec 2022 - Feb 2023'
   },
   {
     id: 4,
-    title: 'Machine Learning Pipeline',
-    description: 'Created an end-to-end ML pipeline for predictive maintenance using Azure Machine Learning and Azure Databricks.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-    tags: ['Azure ML', 'Databricks', 'Python', 'MLOps'],
+    title: 'ThirdEye-Spy: Attendance Monitoring',
+    description: 'Created a real-time attendance monitoring system with face-recognition algorithm, enhancing attendance tracking through face-recognition where all user activity can be tracked.',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop',
+    tags: ['Python', 'Face Recognition', 'SQL', 'Node.js', 'React.js'],
     category: 'machine-learning',
     icon: Cloud,
     features: [
-      'Automated feature engineering',
-      'Model training and evaluation',
-      'CI/CD pipeline for ML models',
-      'Model monitoring and retraining'
-    ]
+      'Implemented face detection and recognition algorithms',
+      'Built web application for real-time monitoring',
+      'Created database storage for attendance records',
+      'Developed analytics for attendance patterns'
+    ],
+    duration: 'Mar 2020 - Dec 2020'
   },
 ];
 
@@ -150,11 +154,14 @@ const ProjectsSection = () => {
               </div>
               
               <div className="p-6">
-                <div className="flex items-center mb-3">
-                  <div className="w-8 h-8 rounded-full bg-azure-100 flex items-center justify-center mr-3">
-                    <project.icon className="h-4 w-4 text-azure-700" />
+                <div className="flex justify-between items-center mb-3">
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-azure-100 flex items-center justify-center mr-3">
+                      <project.icon className="h-4 w-4 text-azure-700" />
+                    </div>
+                    <h3 className="heading-sm">{project.title}</h3>
                   </div>
-                  <h3 className="heading-sm">{project.title}</h3>
+                  <span className="text-sm text-gray-500">{project.duration}</span>
                 </div>
                 
                 <p className="text-gray-600 mb-4">

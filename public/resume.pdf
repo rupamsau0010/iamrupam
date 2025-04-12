@@ -13,9 +13,14 @@ endobj
 <<>>
 endobj
 6 0 obj
-<</Length 44>>
+<</Length 300>>
 stream
-BT /F1 12 Tf 100 700 Td (Sample Resume) Tj ET
+BT /F1 18 Tf 50 750 Td (Rupam Sau) Tj ET
+BT /F1 14 Tf 50 720 Td (Azure Data Engineer) Tj ET
+BT /F1 12 Tf 50 690 Td (Experience with Azure Databricks, Data Factory, SQL, Synapse, ADLS Gen2) Tj ET
+BT /F1 12 Tf 50 660 Td (3+ years experience in data engineering and analytics) Tj ET
+BT /F1 12 Tf 50 630 Td (Certifications: Databricks Certified Data Engineer Professional, Azure Data Engineer Associate) Tj ET
+BT /F1 12 Tf 50 600 Td (Languages: Bengali \(Native\), English \(Professional\)) Tj ET
 endstream
 endobj
 xref
@@ -30,5 +35,5 @@ xref
 trailer
 <</Size 7/Root 1 0 R>>
 startxref
-384
+640
 %%EOF

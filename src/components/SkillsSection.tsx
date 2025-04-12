@@ -31,14 +31,14 @@ const SkillsSection = () => {
   }, []);
 
   const technicalSkills = [
-    { name: 'Azure Data Factory', value: 95 },
-    { name: 'Azure Synapse Analytics', value: 90 },
-    { name: 'Azure Databricks', value: 85 },
+    { name: 'Azure Databricks', value: 95 },
+    { name: 'Azure Data Factory', value: 90 },
+    { name: 'Azure Synapse Analytics', value: 85 },
     { name: 'SQL & T-SQL', value: 95 },
     { name: 'Python', value: 85 },
     { name: 'Spark', value: 80 },
-    { name: 'Azure Data Lake', value: 90 },
-    { name: 'Power BI', value: 75 },
+    { name: 'Delta Lake', value: 90 },
+    { name: 'PySpark', value: 85 },
   ];
 
   const skillCategories = [
@@ -50,12 +50,12 @@ const SkillsSection = () => {
     {
       icon: Code,
       title: 'Programming',
-      skills: ['Python', 'SQL', 'PySpark', 'PowerShell', 'T-SQL'],
+      skills: ['Python', 'SQL', 'PySpark', 'JavaScript', 'Node.js', 'React.js'],
     },
     {
       icon: Server,
       title: 'Data Processing',
-      skills: ['Azure Data Factory', 'Azure Databricks', 'Azure Functions', 'Stream Analytics'],
+      skills: ['Azure Data Factory', 'Azure Databricks', 'Apache Spark', 'Delta Lake'],
     },
     {
       icon: BarChart,
@@ -70,7 +70,7 @@ const SkillsSection = () => {
     {
       icon: Network,
       title: 'Big Data',
-      skills: ['Hadoop', 'Spark', 'Kafka', 'Data Warehousing', 'Data Lakes'],
+      skills: ['Hadoop', 'Spark', 'Apache Sqoop', 'HBase', 'Data Lakes'],
     },
   ];
   
@@ -144,6 +144,19 @@ const SkillsSection = () => {
             <div className="border border-azure-100 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-3">
                 <div className="w-10 h-10 rounded-full bg-azure-100 flex items-center justify-center mr-3">
+                  <Database className="h-5 w-5 text-azure-700" />
+                </div>
+                <div>
+                  <h4 className="font-medium">Databricks Certified:</h4>
+                  <p className="text-sm text-gray-600">Data Engineer Professional</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-500 mt-2">Issued: Jan 2025 • Expires: Jan 2027</p>
+            </div>
+            
+            <div className="border border-azure-100 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-full bg-azure-100 flex items-center justify-center mr-3">
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
@@ -151,7 +164,7 @@ const SkillsSection = () => {
                   <p className="text-sm text-gray-600">Azure Data Engineer Associate</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Issued: Jan 2022 • Expires: Jan 2025</p>
+              <p className="text-xs text-gray-500 mt-2">Issued: Jun 2024 • Expires: Jul 2025</p>
             </div>
             
             <div className="border border-azure-100 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
@@ -160,24 +173,50 @@ const SkillsSection = () => {
                   <Database className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Microsoft Certified:</h4>
-                  <p className="text-sm text-gray-600">Azure Database Administrator</p>
+                  <h4 className="font-medium">Databricks Certified:</h4>
+                  <p className="text-sm text-gray-600">Data Engineer Associate</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Issued: Mar 2021 • Expires: Mar 2024</p>
+              <p className="text-xs text-gray-500 mt-2">Issued: Mar 2024 • Expires: Mar 2026</p>
             </div>
             
             <div className="border border-azure-100 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center mb-3">
                 <div className="w-10 h-10 rounded-full bg-azure-100 flex items-center justify-center mr-3">
-                  <BarChart className="h-5 w-5 text-azure-700" />
+                  <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
                   <h4 className="font-medium">Microsoft Certified:</h4>
-                  <p className="text-sm text-gray-600">Data Analyst Associate</p>
+                  <p className="text-sm text-gray-600">Azure AI Fundamentals</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-500 mt-2">Issued: Nov 2020 • Expires: Nov 2023</p>
+              <p className="text-xs text-gray-500 mt-2">Issued: Feb 2023</p>
+            </div>
+            
+            <div className="border border-azure-100 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-full bg-azure-100 flex items-center justify-center mr-3">
+                  <Cloud className="h-5 w-5 text-azure-700" />
+                </div>
+                <div>
+                  <h4 className="font-medium">Microsoft Certified:</h4>
+                  <p className="text-sm text-gray-600">Azure Data Fundamentals</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-500 mt-2">Issued: Feb 2023</p>
+            </div>
+            
+            <div className="border border-azure-100 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-full bg-azure-100 flex items-center justify-center mr-3">
+                  <Cloud className="h-5 w-5 text-azure-700" />
+                </div>
+                <div>
+                  <h4 className="font-medium">Microsoft Certified:</h4>
+                  <p className="text-sm text-gray-600">Azure Fundamentals</p>
+                </div>
+              </div>
+              <p className="text-xs text-gray-500 mt-2">Issued: Feb 2023</p>
             </div>
           </div>
         </div>
