@@ -17,7 +17,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
     
-    --primary: 210 100% 50%;
+    --primary: 200 100% 50%;
     --primary-foreground: 0 0% 100%;
     
     --secondary: 210 40% 96%;
@@ -26,17 +26,17 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 20% 45%;
     
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 200 85% 54%;
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 221 83% 53%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 200 85% 54%;
     
-    --radius: 0.75rem;
+    --radius: 0.5rem;
     
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 222 47% 11%;
@@ -106,8 +106,16 @@
     @apply bg-black/50 backdrop-blur-md border border-white/10 shadow-sm;
   }
   
+  [data-theme="light"] .glass {
+    @apply bg-white shadow-sm border border-gray-200;
+  }
+  
   .glass-card {
     @apply bg-black/40 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl transition-all duration-300 hover:shadow-xl hover:bg-black/30;
+  }
+  
+  [data-theme="light"] .glass-card {
+    @apply bg-white border border-gray-200 shadow-md hover:shadow-lg hover:border-azure-200;
   }
   
   .section-container {
@@ -134,11 +142,21 @@
     @apply px-3 py-1 rounded-full text-sm font-medium bg-azure-900/60 text-azure-200 border border-azure-700/60;
   }
 
+  [data-theme="light"] .skill-chip {
+    @apply bg-azure-100 text-azure-700 border border-azure-200;
+  }
+
   .data-grid {
     background-size: 40px 40px;
     background-image: 
       linear-gradient(to right, rgba(50, 100, 150, 0.1) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(50, 100, 150, 0.1) 1px, transparent 1px);
+  }
+  
+  [data-theme="light"] .data-grid {
+    background-image: 
+      linear-gradient(to right, rgba(100, 150, 200, 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(100, 150, 200, 0.1) 1px, transparent 1px);
   }
   
   .data-dot {
@@ -152,4 +170,38 @@
   .section-animate.animate-in {
     @apply animate-slide-up;
   }
+
+  /* Light theme specific styles */
+  [data-theme="light"] .text-gray-300 {
+    @apply text-gray-700;
+  }
+
+  [data-theme="light"] .text-gray-400 {
+    @apply text-gray-600;
+  }
+
+  [data-theme="light"] .text-azure-300 {
+    @apply text-azure-600;
+  }
+
+  [data-theme="light"] .text-azure-400 {
+    @apply text-azure-500;
+  }
+
+  [data-theme="light"] .text-azure-200 {
+    @apply text-azure-500;
+  }
+
+  [data-theme="light"] .bg-azure-900\/40 {
+    @apply bg-azure-100;
+  }
+
+  [data-theme="light"] .border-azure-700\/30 {
+    @apply border-azure-200;
+  }
+
+  [data-theme="light"] .bg-azure-900\/20 {
+    @apply bg-azure-100;
+  }
 }
+
