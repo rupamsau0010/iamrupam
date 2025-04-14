@@ -1,11 +1,14 @@
 
 import React, { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Switch } from '@/components/ui/switch';
+import { useTheme } from './ThemeProvider';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,17 +47,29 @@ const Navbar = () => {
           <span className="font-bold text-xl">Data<span className="text-azure-400">Engineer</span></span>
         </a>
         
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href}
-              className="font-medium text-gray-300 hover:text-azure-400 transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-azure-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
+        <div className="hidden md:flex items-center space-x-8">
+          <nav className="flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="font-medium text-gray-300 hover:text-azure-400 transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-azure-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+          
+          <div className="flex items-center space-x-2">
+            <Sun size={18} className={`text-gray-300 ${theme === 'light' ? 'opacity-100' : 'opacity-50'}`} />
+            <Switch 
+              checked={theme === 'dark'} 
+              onCheckedChange={toggleTheme}
+              className="data-[state=checked]:bg-azure-600"
+            />
+            <Moon size={18} className={`text-gray-300 ${theme === 'dark' ? 'opacity-100' : 'opacity-50'}`} />
+          </div>
+        </div>
         
         <Button
           variant="outline" 
@@ -79,6 +94,18 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <div className="flex items-center justify-between py-2 px-4">
+                <span className="text-gray-300">Theme</span>
+                <div className="flex items-center space-x-2">
+                  <Sun size={16} className={`text-gray-300 ${theme === 'light' ? 'opacity-100' : 'opacity-50'}`} />
+                  <Switch 
+                    checked={theme === 'dark'} 
+                    onCheckedChange={toggleTheme}
+                    className="data-[state=checked]:bg-azure-600"
+                  />
+                  <Moon size={16} className={`text-gray-300 ${theme === 'dark' ? 'opacity-100' : 'opacity-50'}`} />
+                </div>
+              </div>
             </div>
           </div>
         )}
