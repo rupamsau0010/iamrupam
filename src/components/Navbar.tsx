@@ -53,7 +53,9 @@ const Navbar = () => {
               <a 
                 key={link.name}
                 href={link.href}
-                className="font-medium text-gray-300 hover:text-azure-400 transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-azure-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className={`font-medium transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-azure-500 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
+                  theme === 'dark' ? 'text-gray-300 hover:text-azure-400' : 'text-gray-700 hover:text-azure-600'
+                }`}
               >
                 {link.name}
               </a>
@@ -61,20 +63,20 @@ const Navbar = () => {
           </nav>
           
           <div className="flex items-center space-x-2">
-            <Sun size={18} className={`text-gray-300 ${theme === 'light' ? 'opacity-100' : 'opacity-50'}`} />
+            <Sun size={18} className={`${theme === 'light' ? 'text-amber-500' : 'text-gray-400'}`} />
             <Switch 
               checked={theme === 'dark'} 
               onCheckedChange={toggleTheme}
               className="data-[state=checked]:bg-azure-600"
             />
-            <Moon size={18} className={`text-gray-300 ${theme === 'dark' ? 'opacity-100' : 'opacity-50'}`} />
+            <Moon size={18} className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-400'}`} />
           </div>
         </div>
         
         <Button
           variant="outline" 
           size="icon"
-          className="md:hidden border-azure-700/50 text-gray-300"
+          className={`md:hidden ${theme === 'dark' ? 'border-azure-700/50 text-gray-300' : 'border-azure-500/50 text-gray-700'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -88,22 +90,24 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="py-2 px-4 font-medium hover:bg-azure-900/20 rounded-md transition-colors text-gray-300"
+                  className={`py-2 px-4 font-medium hover:bg-azure-900/20 rounded-md transition-colors ${
+                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                  }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
               <div className="flex items-center justify-between py-2 px-4">
-                <span className="text-gray-300">Theme</span>
+                <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>Theme</span>
                 <div className="flex items-center space-x-2">
-                  <Sun size={16} className={`text-gray-300 ${theme === 'light' ? 'opacity-100' : 'opacity-50'}`} />
+                  <Sun size={16} className={`${theme === 'light' ? 'text-amber-500' : 'text-gray-400'}`} />
                   <Switch 
                     checked={theme === 'dark'} 
                     onCheckedChange={toggleTheme}
                     className="data-[state=checked]:bg-azure-600"
                   />
-                  <Moon size={16} className={`text-gray-300 ${theme === 'dark' ? 'opacity-100' : 'opacity-50'}`} />
+                  <Moon size={16} className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-400'}`} />
                 </div>
               </div>
             </div>
