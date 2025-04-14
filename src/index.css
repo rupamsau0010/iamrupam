@@ -203,5 +203,16 @@
   [data-theme="light"] .bg-azure-900\/20 {
     @apply bg-azure-100;
   }
+  
+  [data-theme="light"] .bg-data-900 {
+    @apply bg-teal-100 text-teal-700;
+  }
+  
+  [data-theme="light"] .text-data-200 {
+    @apply text-teal-700;
+  }
+  
+  [data-theme="light"] .text-gray-100 {
+    @apply text-gray-800;
+  }
 }
-
