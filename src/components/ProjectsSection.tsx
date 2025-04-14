@@ -105,16 +105,16 @@ const ProjectsSection = () => {
     : projects.filter(project => project.category === activeTab);
   
   return (
-    <section id="projects" className="py-20 bg-azure-50/50">
+    <section id="projects" className="py-20 bg-background/30">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-16 section-animate" ref={sectionRef}>
-          <span className="inline-block px-3 py-1 bg-azure-100 text-azure-800 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-3 py-1 bg-azure-900 text-azure-200 rounded-full text-sm font-medium mb-4">
             Featured Projects
           </span>
-          <h2 className="heading-lg">
+          <h2 className="heading-lg text-foreground">
             Data Solutions Portfolio
           </h2>
-          <p className="mt-6 text-gray-600">
+          <p className="mt-6 text-gray-300">
             Explore a collection of data engineering projects that showcase my expertise in Azure Cloud technologies and data solutions.
           </p>
           
@@ -141,11 +141,11 @@ const ProjectsSection = () => {
                     backgroundSize: 'cover',
                   }}
                 ></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
                 <div className="absolute bottom-0 left-0 p-4 w-full">
                   <div className="flex items-center space-x-1">
                     {project.tags.map((tag, index) => (
-                      <Badge key={index} variant="secondary" className="bg-azure-900/60 text-white border-none hover:bg-azure-900/80">
+                      <Badge key={index} variant="secondary" className="bg-azure-900/80 text-azure-100 border-none hover:bg-azure-900/90">
                         {tag}
                       </Badge>
                     ))}
@@ -156,24 +156,24 @@ const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex justify-between items-center mb-3">
                   <div className="flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-azure-100 flex items-center justify-center mr-3">
-                      <project.icon className="h-4 w-4 text-azure-700" />
+                    <div className="w-8 h-8 rounded-full bg-azure-900 flex items-center justify-center mr-3">
+                      <project.icon className="h-4 w-4 text-azure-400" />
                     </div>
-                    <h3 className="heading-sm">{project.title}</h3>
+                    <h3 className="heading-sm text-gray-100">{project.title}</h3>
                   </div>
-                  <span className="text-sm text-gray-500">{project.duration}</span>
+                  <span className="text-sm text-gray-400">{project.duration}</span>
                 </div>
                 
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   {project.description}
                 </p>
                 
                 <div className="mt-4 space-y-2">
-                  <h4 className="font-semibold">Key Features:</h4>
+                  <h4 className="font-semibold text-gray-100">Key Features:</h4>
                   <ul className="space-y-1">
                     {project.features.map((feature, index) => (
-                      <li key={index} className="text-gray-700 text-sm flex items-start">
-                        <ChevronRight className="h-4 w-4 text-azure-600 mr-1 mt-0.5 flex-shrink-0" />
+                      <li key={index} className="text-gray-300 text-sm flex items-start">
+                        <ChevronRight className="h-4 w-4 text-azure-400 mr-1 mt-0.5 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -181,7 +181,7 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="mt-6 flex justify-end space-x-3">
-                  <Button variant="outline" size="sm" className="flex items-center gap-1">
+                  <Button variant="outline" size="sm" className="flex items-center gap-1 border-azure-700 text-gray-200">
                     <Github className="h-4 w-4" />
                     Source
                   </Button>
