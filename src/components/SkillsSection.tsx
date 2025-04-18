@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { BarChart, Database, Code, Server, Cloud, Network, Link } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
@@ -77,20 +78,20 @@ const SkillsSection = () => {
     <section id="skills" className="py-20">
       <div className="section-container" ref={sectionRef}>
         <div className="text-center max-w-2xl mx-auto mb-16 section-animate">
-          <span className="hero-badge">
+          <span className="inline-block px-3 py-1 bg-azure-100 text-azure-800 rounded-full text-sm font-medium mb-4">
             Skills & Expertise
           </span>
-          <h2 className="heading-lg text-light-primary">
+          <h2 className="heading-lg">
             Technical Proficiencies
           </h2>
-          <p className="mt-6 text-light-secondary">
+          <p className="mt-6 text-gray-600">
             With specialized expertise in Azure Cloud and data technologies, I bring a comprehensive skill set to tackle complex data engineering challenges.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 section-animate" style={{ animationDelay: '0.2s' }}>
           <div className="glass-card p-6 space-y-6">
-            <h3 className="heading-sm text-light-primary flex items-center gap-2">
+            <h3 className="heading-sm text-azure-800 flex items-center gap-2">
               <BarChart className="h-5 w-5" />
               Technical Proficiency
             </h3>

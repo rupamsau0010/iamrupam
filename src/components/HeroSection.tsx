@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Database, Server, Cloud, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -16,6 +17,7 @@ const HeroSection = () => {
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
       
+      // Set canvas size
       const setCanvasSize = () => {
         canvas.width = container.offsetWidth;
         canvas.height = container.offsetHeight;
@@ -24,6 +26,7 @@ const HeroSection = () => {
       setCanvasSize();
       window.addEventListener('resize', setCanvasSize);
       
+      // Create particles
       const particles: Array<{
         x: number;
         y: number;
@@ -46,6 +49,7 @@ const HeroSection = () => {
         });
       }
       
+      // Create connections between close particles
       const connectParticles = (p1: typeof particles[0], p2: typeof particles[0]) => {
         const dx = p1.x - p2.x;
         const dy = p1.y - p2.y;
@@ -61,13 +65,16 @@ const HeroSection = () => {
         }
       };
       
+      // Animation loop
       const animate = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
         particles.forEach(p => {
+          // Update position
           p.x += Math.cos(p.direction) * p.speed;
           p.y += Math.sin(p.direction) * p.speed;
           
+          // Boundary check
           if (p.x < 0 || p.x > canvas.width) {
             p.direction = Math.PI - p.direction;
           }
@@ -75,11 +82,13 @@ const HeroSection = () => {
             p.direction = -p.direction;
           }
           
+          // Draw particle
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
           ctx.fillStyle = p.color;
           ctx.fill();
           
+          // Connect particles
           particles.forEach(p2 => {
             if (p !== p2) {
               connectParticles(p, p2);
@@ -109,7 +118,7 @@ const HeroSection = () => {
       <div className="container relative z-10">
         <div className="max-w-3xl">
           <div className="inline-block animate-fade-in opacity-0" style={{ animationDelay: '0.1s' }}>
-            <span className="hero-badge">
+            <span className="px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium border border-azure-700/30">
               Azure Data Engineer
             </span>
           </div>
@@ -123,15 +132,15 @@ const HeroSection = () => {
           </p>
           
           <div className="mt-8 flex flex-wrap gap-4 animate-fade-in opacity-0" style={{ animationDelay: '0.7s' }}>
-            <Button asChild size="lg" className="gap-2 bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))/90]">
+            <Button asChild size="lg" className="gap-2 bg-azure-600 hover:bg-azure-700">
               <a href="#projects">
                 View Projects <ArrowRight size={16} />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-azure-700/50 hover:bg-azure-900/40">
               <a href="#contact">Get in Touch</a>
             </Button>
-            <Button asChild variant="secondary" size="lg" className="gap-2 bg-[#111827] text-white hover:bg-[#111827]/90 dark:bg-gray-700 dark:hover:bg-gray-600">
+            <Button asChild variant="secondary" size="lg" className="gap-2 bg-secondary hover:bg-secondary/80">
               <a href="/resume.pdf" download>
                 Download Resume <Download size={16} />
               </a>

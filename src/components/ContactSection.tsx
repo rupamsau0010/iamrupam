@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -74,13 +75,13 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-background/30">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-16 section-animate" ref={sectionRef}>
-          <span className="hero-badge">
+          <span className="inline-block px-3 py-1 bg-azure-900 text-azure-200 rounded-full text-sm font-medium mb-4">
             Get In Touch
           </span>
-          <h2 className="heading-lg text-light-primary">
+          <h2 className="heading-lg text-foreground">
             Let's Work Together
           </h2>
-          <p className="mt-6 text-light-secondary">
+          <p className="mt-6 text-gray-300">
             Interested in discussing a project or have questions about my work? I'd love to hear from you.
           </p>
         </div>
@@ -88,7 +89,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 section-animate" style={{ animationDelay: '0.2s' }}>
           <div className="md:col-span-2 space-y-8">
             <div className="glass-card p-6 space-y-6">
-              <h3 className="heading-sm heading-blue mb-4">Contact Information</h3>
+              <h3 className="heading-sm text-azure-300 mb-4">Contact Information</h3>
               
               <div className="flex items-start">
                 <div className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center mr-4 flex-shrink-0">
@@ -122,16 +123,16 @@ const ContactSection = () => {
             </div>
             
             <div className="glass-card p-6">
-              <h3 className="heading-sm heading-blue mb-4">Connect With Me</h3>
+              <h3 className="heading-sm text-azure-300 mb-4">Connect With Me</h3>
               <div className="flex space-x-3">
-                <a href="#" className="w-10 h-10 rounded-full bg-[hsl(var(--badge-bg))] flex items-center justify-center hover:opacity-80 transition-colors">
-                  <Linkedin className="h-5 w-5 text-[hsl(var(--badge-text))]" />
+                <a href="#" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
+                  <Linkedin className="h-5 w-5 text-azure-400" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-[hsl(var(--badge-bg))] flex items-center justify-center hover:opacity-80 transition-colors">
-                  <Github className="h-5 w-5 text-[hsl(var(--badge-text))]" />
+                <a href="#" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
+                  <Github className="h-5 w-5 text-azure-400" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-[hsl(var(--badge-bg))] flex items-center justify-center hover:opacity-80 transition-colors">
-                  <Twitter className="h-5 w-5 text-[hsl(var(--badge-text))]" />
+                <a href="#" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
+                  <Twitter className="h-5 w-5 text-azure-400" />
                 </a>
               </div>
             </div>
