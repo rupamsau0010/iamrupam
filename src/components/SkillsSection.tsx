@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { BarChart, Database, Code, Server, Cloud, Network, Link } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
@@ -78,13 +77,15 @@ const SkillsSection = () => {
     <section id="skills" className="py-20">
       <div className="section-container" ref={sectionRef}>
         <div className="text-center max-w-2xl mx-auto mb-16 section-animate">
-          <span className="inline-block px-3 py-1 bg-azure-100 text-azure-800 rounded-full text-sm font-medium mb-4">
-            Skills & Expertise
-          </span>
+          <div className="inline-block animate-fade-in opacity-0 mb-4" style={{ animationDelay: '0.1s' }}>
+            <span className="px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium border border-azure-700/30">
+              Skills & Expertise
+            </span>
+          </div>
           <h2 className="heading-lg">
             Technical Proficiencies
           </h2>
-          <p className="mt-6 text-gray-600">
+          <p className="mt-6 text-gray-300">
             With specialized expertise in Azure Cloud and data technologies, I bring a comprehensive skill set to tackle complex data engineering challenges.
           </p>
         </div>
@@ -96,12 +97,12 @@ const SkillsSection = () => {
               Technical Proficiency
             </h3>
             
-            <div className="space-y-4">
+            <div className="space-y-4 text-gray-300">
               {technicalSkills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex justify-between mb-1">
-                    <span className="font-medium text-gray-700">{skill.name}</span>
-                    <span className="text-gray-500 text-sm">{skill.value}%</span>
+                    <span>{skill.name}</span>
+                    <span>{skill.value}%</span>
                   </div>
                   <Progress 
                     value={skill.value} 
@@ -118,11 +119,13 @@ const SkillsSection = () => {
                 <div key={index} className="glass-card p-5 hover:scale-[1.02] transition-transform duration-300">
                   <div className="flex items-center mb-3">
                     <category.icon className="h-5 w-5 text-azure-600 mr-2" />
-                    <h4 className="font-semibold">{category.title}</h4>
+                    <h4 className="font-semibold text-azure-800 flex items-center gap-2">
+                      {category.title}
+                    </h4>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 text-gray-300">
                     {category.skills.map((skill, i) => (
-                      <li key={i} className="text-gray-700 text-sm flex items-center">
+                      <li key={i} className="text-gray-300 text-sm flex items-center">
                         <div className="w-1.5 h-1.5 rounded-full bg-azure-500 mr-2"></div>
                         {skill}
                       </li>
@@ -147,8 +150,10 @@ const SkillsSection = () => {
                   <Database className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Databricks Certified:</h4>
-                  <p className="text-sm text-gray-600">Data Engineer Professional</p>
+                  <a href="https://example.com/databricks-certified-data-engineer-professional" target="_blank" rel="noopener noreferrer">
+                    <h4 className="font-medium text-azure-800">Databricks Certified:</h4>
+                    <p className="text-sm text-gray-600">Data Engineer Professional</p>
+                  </a>
                 </div>
               </div>
               <p className="text-xs text-gray-500 mt-2">Issued: Jan 2025 • Expires: Jan 2027</p>
@@ -160,8 +165,10 @@ const SkillsSection = () => {
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Microsoft Certified:</h4>
-                  <p className="text-sm text-gray-600">Azure Data Engineer Associate</p>
+                  <a href="https://example.com/microsoft-certified-azure-data-engineer-associate" target="_blank" rel="noopener noreferrer">
+                    <h4 className="font-medium text-azure-800">Microsoft Certified:</h4>
+                    <p className="text-sm text-gray-600">Azure Data Engineer Associate</p>
+                  </a>
                 </div>
               </div>
               <p className="text-xs text-gray-500 mt-2">Issued: Jun 2024 • Expires: Jul 2025</p>
@@ -173,8 +180,10 @@ const SkillsSection = () => {
                   <Database className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Databricks Certified:</h4>
-                  <p className="text-sm text-gray-600">Data Engineer Associate</p>
+                  <a href="https://example.com/databricks-certified-data-engineer-associate" target="_blank" rel="noopener noreferrer">
+                    <h4 className="font-medium text-azure-800">Databricks Certified:</h4>
+                    <p className="text-sm text-gray-600">Data Engineer Associate</p>
+                  </a>
                 </div>
               </div>
               <p className="text-xs text-gray-500 mt-2">Issued: Mar 2024 • Expires: Mar 2026</p>
@@ -186,8 +195,10 @@ const SkillsSection = () => {
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Microsoft Certified:</h4>
-                  <p className="text-sm text-gray-600">Azure AI Fundamentals</p>
+                  <a href="https://example.com/microsoft-certified-azure-ai-fundamentals" target="_blank" rel="noopener noreferrer">
+                    <h4 className="font-medium text-azure-800">Microsoft Certified:</h4>
+                    <p className="text-sm text-gray-600">Azure AI Fundamentals</p>
+                  </a>
                 </div>
               </div>
               <p className="text-xs text-gray-500 mt-2">Issued: Feb 2023</p>
@@ -199,8 +210,10 @@ const SkillsSection = () => {
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Microsoft Certified:</h4>
-                  <p className="text-sm text-gray-600">Azure Data Fundamentals</p>
+                  <a href="https://example.com/microsoft-certified-azure-data-fundamentals" target="_blank" rel="noopener noreferrer">
+                    <h4 className="font-medium text-azure-800">Microsoft Certified:</h4>
+                    <p className="text-sm text-gray-600">Azure Data Fundamentals</p>
+                  </a>
                 </div>
               </div>
               <p className="text-xs text-gray-500 mt-2">Issued: Feb 2023</p>
@@ -212,8 +225,10 @@ const SkillsSection = () => {
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Microsoft Certified:</h4>
-                  <p className="text-sm text-gray-600">Azure Fundamentals</p>
+                  <a href="https://example.com/microsoft-certified-azure-fundamentals" target="_blank" rel="noopener noreferrer">
+                    <h4 className="font-medium text-azure-800">Microsoft Certified:</h4>
+                    <p className="text-sm text-gray-600">Azure Fundamentals</p>
+                  </a>
                 </div>
               </div>
               <p className="text-xs text-gray-500 mt-2">Issued: Feb 2023</p>

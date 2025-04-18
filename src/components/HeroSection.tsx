@@ -124,7 +124,7 @@ const HeroSection = () => {
           </div>
           
           <h1 className="heading-xl mt-6 animate-fade-in opacity-0" style={{ animationDelay: '0.3s' }}>
-            Rupam Sau: Transforming <span className="text-azure-400">Data</span> into Valuable Insights
+            Transforming <span className="text-azure-400">Data</span> into Valuable Insights
           </h1>
           
           <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl animate-fade-in opacity-0" style={{ animationDelay: '0.5s' }}>

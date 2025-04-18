@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { useTheme } from './ThemeProvider';
@@ -38,9 +37,11 @@ const AboutSection = () => {
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="md:w-2/5">
               <div className="sticky top-24">
-                <span className="inline-block px-3 py-1 bg-data-900 text-data-200 rounded-full text-sm font-medium mb-4">
-                  About Me
-                </span>
+                <div className="inline-block animate-fade-in opacity-0 mb-4" style={{ animationDelay: '0.1s' }}>
+                  <span className="px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium border border-azure-700/30">
+                    About Me
+                  </span>
+                </div>
                 <h2 className="heading-lg text-foreground">
                   Passionate about solving <span className="text-azure-400">complex data challenges</span>
                 </h2>

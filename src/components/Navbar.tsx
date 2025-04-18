@@ -43,7 +43,7 @@ const Navbar = () => {
           <div className="relative w-8 h-8">
             <div className={`absolute inset-0 ${theme === 'light' ? 'bg-gradient-to-r from-azure-500 to-data-500' : 'bg-gradient-to-r from-azure-600 to-data-600'} rounded-md`}></div>
             <div className={`absolute inset-0.5 ${theme === 'light' ? 'bg-white' : 'bg-background'} rounded-md flex items-center justify-center`}>
-              <span className="font-bold text-azure-500">DE</span>
+              <span className="font-bold text-azure-500">RS</span>
             </div>
           </div>
           <span className="font-bold text-xl">Data<span className="text-azure-500">Engineer</span></span>

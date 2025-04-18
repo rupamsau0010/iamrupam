@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -75,9 +74,11 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-background/30">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-16 section-animate" ref={sectionRef}>
-          <span className="inline-block px-3 py-1 bg-azure-900 text-azure-200 rounded-full text-sm font-medium mb-4">
-            Get In Touch
-          </span>
+          <div className="inline-block animate-fade-in opacity-0 mb-4" style={{ animationDelay: '0.1s' }}>
+            <span className="px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium border border-azure-700/30">
+              Get In Touch
+            </span>
+          </div>
           <h2 className="heading-lg text-foreground">
             Let's Work Together
           </h2>

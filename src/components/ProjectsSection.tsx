@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Github, ChevronRight, Database, Server, BarChart, Cloud, Mail, Activity } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -108,9 +107,11 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 bg-background/30">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-16 section-animate" ref={sectionRef}>
-          <span className="inline-block px-3 py-1 bg-azure-900 text-azure-200 rounded-full text-sm font-medium mb-4">
-            Featured Projects
-          </span>
+          <div className="inline-block animate-fade-in opacity-0 mb-4" style={{ animationDelay: '0.1s' }}>
+            <span className="px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium border border-azure-700/30">
+              Featured Projects
+            </span>
+          </div>
           <h2 className="heading-lg text-foreground">
             Data Solutions Portfolio
           </h2>
@@ -181,7 +182,7 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="mt-6 flex justify-end space-x-3">
-                  <Button variant="outline" size="sm" className="flex items-center gap-1 border-azure-700 text-gray-200">
+                  <Button variant="outline" size="sm" className="flex items-center gap-1 border-azure-700 text-black dark:text-white">
                     <Github className="h-4 w-4" />
                     Source
                   </Button>
