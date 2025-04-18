@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Github, ChevronRight, Database, Server, BarChart, Cloud, Mail, Activity } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -108,7 +107,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 bg-background/30">
       <div className="section-container">
         <div className="text-center max-w-2xl mx-auto mb-16 section-animate" ref={sectionRef}>
-          <span className="inline-block px-3 py-1 bg-azure-900 text-azure-200 rounded-full text-sm font-medium mb-4">
+          <span className="hero-badge">
             Featured Projects
           </span>
           <h2 className="heading-lg text-foreground">
