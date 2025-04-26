@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Database, Server, Cloud, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -117,6 +116,11 @@ const HeroSection = () => {
       
       <div className="container relative z-10">
         <div className="max-w-3xl">
+          <div className="inline-block animate-fade-in opacity-0 mr-2" style={{ animationDelay: '0.1s' }}>
+            <span className="px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium border border-azure-700/30">
+              Rupam Sau
+            </span>
+          </div>
           <div className="inline-block animate-fade-in opacity-0" style={{ animationDelay: '0.1s' }}>
             <span className="px-3 py-1 bg-azure-900/40 text-azure-200 rounded-full text-sm font-medium border border-azure-700/30">
               Azure Data Engineer

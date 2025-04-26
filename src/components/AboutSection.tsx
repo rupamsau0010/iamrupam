@@ -51,7 +51,7 @@ const AboutSection = () => {
             
             <div className="md:w-3/5 space-y-6">
               <p className="text-lg text-gray-300">
-                With over 3 years of experience as a Data Engineer specializing in Azure Cloud technologies, I've developed a passion for designing and implementing robust data solutions that drive business value.
+                Hi, I'm Rupam; with over 3 years of experience as a Data Engineer specializing in Azure Cloud technologies, I've developed a passion for designing and implementing robust data solutions that drive business value.
               </p>
               
               <p className="text-lg text-gray-300">
