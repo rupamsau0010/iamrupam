@@ -19,4 +19,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: 'dist',
+  },
+  async closeBundle() {
+    // Write an empty .nojekyll file to the dist folder after build
+    const fs = await import('fs');
+    const { resolve } = await import('path');
+    fs.writeFileSync(resolve(__dirname, 'dist/.nojekyll'), '');
+  }
 }));
