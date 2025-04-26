@@ -5,14 +5,14 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? "/iamrupam/" : "/", // ✅ Dynamic base
   server: {
     host: "::",
     port: 8080,
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -23,7 +23,6 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
   },
   async closeBundle() {
-    // Write an empty .nojekyll file to the dist folder after build
     const fs = await import('fs');
     const { resolve } = await import('path');
     fs.writeFileSync(resolve(__dirname, 'dist/.nojekyll'), '');
