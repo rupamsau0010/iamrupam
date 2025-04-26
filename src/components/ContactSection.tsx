@@ -24,28 +24,6 @@ const ContactSection = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
-  };
-  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -146,7 +124,14 @@ const ContactSection = () => {
             <div className="glass-card p-8">
               <h3 className="heading-sm text-azure-300 mb-6">Send Me a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const mailto = `mailto:rupamsau721401@gmail.com?cc=${encodeURIComponent(formData.email)}&subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(formData.message)}`;
+                  window.location.href = mailto;
+                }}
+                className="space-y-6"
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-azure-300">
@@ -159,7 +144,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       placeholder="John Doe" 
                       required 
-                      className="bg-azure-950/50 border-azure-800 text-gray-200 placeholder:text-gray-500"
+                      className="bg-azure-950/50 border-azure-800 text-gray-700 placeholder:text-gray-500"
                     />
                   </div>
                   
@@ -175,7 +160,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       placeholder="john@example.com" 
                       required 
-                      className="bg-azure-950/50 border-azure-800 text-gray-200 placeholder:text-gray-500"
+                      className="bg-azure-950/50 border-azure-800 text-gray-700 placeholder:text-gray-500"
                     />
                   </div>
                 </div>
@@ -191,7 +176,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     placeholder="How can I help you?" 
                     required 
-                    className="bg-azure-950/50 border-azure-800 text-gray-200 placeholder:text-gray-500"
+                    className="bg-azure-950/50 border-azure-800 text-gray-700 placeholder:text-gray-500"
                   />
                 </div>
                 
@@ -207,18 +192,12 @@ const ContactSection = () => {
                     placeholder="Your message here..." 
                     rows={5} 
                     required 
-                    className="bg-azure-950/50 border-azure-800 text-gray-200 placeholder:text-gray-500"
+                    className="bg-azure-950/50 border-azure-800 text-gray-700 placeholder:text-gray-500"
                   />
                 </div>
                 
-                <Button type="submit" className="w-full flex items-center justify-center gap-2" disabled={isSubmitting}>
-                  {isSubmitting ? (
-                    <>Sending<span className="animate-pulse">...</span></>
-                  ) : (
-                    <>
-                      Send Message <Send className="h-4 w-4" />
-                    </>
-                  )}
+                <Button type="submit" className="w-full flex items-center justify-center gap-2">
+                  Send Message <Send className="h-4 w-4" />
                 </Button>
               </form>
             </div>
