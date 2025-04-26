@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github, Instagram, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -83,7 +83,7 @@ const ContactSection = () => {
             Let's Work Together
           </h2>
           <p className="mt-6 text-gray-300">
-            Interested in discussing a project or have questions about my work? I'd love to hear from you.
+            Are you a recruiter hiring the best Data Engineers for your company? I'd love to hear from you.
           </p>
         </div>
         
@@ -98,7 +98,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-200">Email</h4>
-                  <p className="text-gray-300">contact@dataengineer.com</p>
+                  <p className="text-gray-300">rupamsau721401@gmail.com</p>
                 </div>
               </div>
               
@@ -108,7 +108,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-200">Phone</h4>
-                  <p className="text-gray-300">(123) 456-7890</p>
+                  <p className="text-gray-300">+91 - 9064869734</p>
                 </div>
               </div>
               
@@ -118,7 +118,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-gray-200">Location</h4>
-                  <p className="text-gray-300">Seattle, Washington, USA</p>
+                  <p className="text-gray-300">Kolkata, WB, India</p>
                 </div>
               </div>
             </div>
@@ -126,14 +126,17 @@ const ContactSection = () => {
             <div className="glass-card p-6">
               <h3 className="heading-sm text-azure-300 mb-4">Connect With Me</h3>
               <div className="flex space-x-3">
-                <a href="#" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
+                <a href="https://www.linkedin.com/in/rupamsau0010/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
                   <Linkedin className="h-5 w-5 text-azure-400" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
+                <a href="https://github.com/rupamsau0010" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
                   <Github className="h-5 w-5 text-azure-400" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
-                  <Twitter className="h-5 w-5 text-azure-400" />
+                <a href="https://leetcode.com/u/rupamsau_0010/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
+                  <Code className="h-5 w-5 text-azure-400" />
+                </a>
+                <a href="https://instagram.com/rupamsau_0010" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-azure-900 flex items-center justify-center hover:bg-azure-800 transition-colors">
+                  <Instagram className="h-5 w-5 text-azure-400" />
                 </a>
               </div>
             </div>

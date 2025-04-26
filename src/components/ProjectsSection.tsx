@@ -7,25 +7,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const projects = [
   {
     id: 1,
-    title: 'Formula 1 Racing Data Analytics',
-    description: 'Transformed historical data from Formula 1 racing into meaningful insights using Azure Databricks, Delta Table, Azure SQL, and ADLS Gen2. The project involved tasks from data ingestion to processing and visualization.',
-    image: 'https://images.unsplash.com/photo-1518291344630-4857135fb581?q=80&w=2069&auto=format&fit=crop',
-    tags: ['Azure Databricks', 'Delta Table', 'Azure SQL', 'ADLS Gen2'],
-    category: 'data-engineering',
-    icon: BarChart,
-    features: [
-      'Designed and implemented ETL pipelines for race telemetry data',
-      'Created optimized storage schema with Delta Tables',
-      'Built interactive dashboards for race performance analysis',
-      'Implemented real-time data processing for live race insights'
-    ],
-    duration: 'Nov 2022 - Jan 2023'
-  },
-  {
-    id: 2,
     title: 'Email Automation Tool in Azure',
     description: 'Developed a scheduler-based email automation tool for conditional batch processing of emails using Azure technologies, including ADF, Databricks, ADLS Gen2, and Azure SQL.',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://martech.org/wp-content/uploads/2024/10/Email-marketing-automation-concept.png',
     tags: ['ADF', 'Databricks', 'ADLS Gen2', 'Azure SQL'],
     category: 'data-engineering',
     icon: Mail,
@@ -35,29 +19,14 @@ const projects = [
       'Created a scheduling system for batch email operations',
       'Developed monitoring dashboards for email processing metrics'
     ],
-    duration: 'Feb 2023 - Present'
+    duration: 'Feb 2023 - Mar 2023',
+    source: 'https://github.com/rupamsau0010/email-automation-dashboard-databricks'
   },
   {
-    id: 3,
-    title: 'Covid-19 Data Processing',
-    description: 'Developed a complete data pipeline in the Azure environment for processing Covid-19 data, leveraging ADF, Databricks, ADLS Gen2, and Azure SQL.',
-    image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=2032&auto=format&fit=crop',
-    tags: ['ADF', 'Databricks', 'ADLS Gen2', 'Azure SQL'],
-    category: 'data-engineering',
-    icon: Activity,
-    features: [
-      'Ingested and processed global COVID-19 statistics',
-      'Built streamlined data pipeline for efficient processing',
-      'Created visualizations and dashboards for data insights',
-      'Implemented scalable architecture to handle changing data volumes'
-    ],
-    duration: 'Dec 2022 - Feb 2023'
-  },
-  {
-    id: 4,
+    id: 2,
     title: 'ThirdEye-Spy: Attendance Monitoring',
     description: 'Created a real-time attendance monitoring system with face-recognition algorithm, enhancing attendance tracking through face-recognition where all user activity can be tracked.',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://repository-images.githubusercontent.com/194294975/e6cdef00-99ef-11e9-90d0-c64097fc903d',
     tags: ['Python', 'Face Recognition', 'SQL', 'Node.js', 'React.js'],
     category: 'machine-learning',
     icon: Cloud,
@@ -67,7 +36,42 @@ const projects = [
       'Created database storage for attendance records',
       'Developed analytics for attendance patterns'
     ],
-    duration: 'Mar 2020 - Dec 2020'
+    duration: 'Mar 2020 - Dec 2020',
+    source: 'https://github.com/rupamsau0010/ThirdEye-Spy'
+  },
+  {
+    id: 3,
+    title: 'Covid-19 Data Processing',
+    description: 'Developed a complete data pipeline in the Azure environment for processing Covid-19 data, leveraging ADF, Databricks, ADLS Gen2, and Azure SQL.',
+    image: 'https://www.tableau.com/sites/default/files/2021-09/COVID_Starter.png',
+    tags: ['ADF', 'Databricks', 'ADLS Gen2', 'Azure SQL'],
+    category: 'data-engineering',
+    icon: Activity,
+    features: [
+      'Ingested and processed global COVID-19 statistics',
+      'Built streamlined data pipeline for efficient processing',
+      'Created visualizations and dashboards for data insights',
+      'Implemented scalable architecture to handle changing data volumes'
+    ],
+    duration: 'Dec 2022 - Feb 2023',
+    source: 'https://github.com/rupamsau0010/covid-reporting-adf'
+  },
+  {
+    id: 4,
+    title: 'Formula 1 Racing Data Analytics',
+    description: 'Transformed historical data from Formula 1 racing into meaningful insights using Azure Databricks, Delta Table, Azure SQL, and ADLS Gen2. The project involved tasks from data ingestion to processing and visualization.',
+    image: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/0*jRcdvzxE1oqJt4D8',
+    tags: ['Azure Databricks', 'Delta Table', 'Azure SQL', 'ADLS Gen2'],
+    category: 'data-engineering',
+    icon: BarChart,
+    features: [
+      'Designed and implemented ETL pipelines for race telemetry data',
+      'Created optimized storage schema with Delta Tables',
+      'Built interactive dashboards for race performance analysis',
+      'Implemented real-time data processing for live race insights'
+    ],
+    duration: 'Nov 2022 - Jan 2023',
+    source: 'https://github.com/rupamsau0010/azure-databricks-formula-1'
   },
 ];
 
@@ -182,14 +186,12 @@ const ProjectsSection = () => {
                 </div>
                 
                 <div className="mt-6 flex justify-end space-x-3">
-                  <Button variant="outline" size="sm" className="flex items-center gap-1 border-azure-700 text-black dark:text-white">
-                    <Github className="h-4 w-4" />
-                    Source
-                  </Button>
-                  <Button size="sm" className="flex items-center gap-1">
-                    <ExternalLink className="h-4 w-4" />
-                    View Details
-                  </Button>
+                  <a href={project.source} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" className="flex items-center gap-1">
+                      <Github className="h-4 w-4" />
+                      Source
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>

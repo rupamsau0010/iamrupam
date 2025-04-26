@@ -1,11 +1,10 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Calendar, Building, Briefcase, Lightbulb } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const ExperienceSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -18,11 +17,11 @@ const ExperienceSection = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
@@ -33,60 +32,58 @@ const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
-      role: 'Programming Analyst',
-      company: 'Cognizant',
+      role: 'Data Engineer (Programmer Analyst)',
+      company: 'Cognizant Technology Solutions',
       duration: 'Oct 2022 - Present',
       location: 'Kolkata, West Bengal, India',
-      description: 'Working on Azure-based data engineering projects, building scalable data solutions.',
+      description: 'Contributing to large-scale data engineering initiatives for a leading property insurance provider in North America, focusing on Azure cloud technologies.',
       achievements: [
-        'Designed and implemented ETL pipelines using Azure Data Factory and Databricks',
-        'Created optimized data solutions leveraging Azure cloud services',
-        'Implemented data quality frameworks to ensure data integrity',
-        'Collaborated with data science teams on predictive analytics solutions'
+        'Designed and implemented a scalable Operational Data Store (ODS) on Azure from scratch.',
+        'Optimized ETL pipelines to handle 7+ TBs of data efficiently, improving ingestion speed.',
+        'Collaborated with Data Scientists and BI Engineers to ensure high-quality data for analytics.',
+        'Developed Spark-based ETL solutions reducing execution time by 40%, leading to cost efficiency.'
       ]
     },
     {
       id: 2,
-      role: 'GenC Next Intern',
-      company: 'Cognizant',
-      duration: 'Feb 2022 - Oct 2022',
-      location: 'Remote',
-      description: 'Trained on various big data technologies including Apache Sqoop and HBase.',
+      role: 'Big Data Engineer Intern',
+      company: 'Cognizant Technology Solutions',
+      duration: 'Feb 2022 - Aug 2022',
+      location: 'Kolkata, West Bengal, India',
+      description: 'Hands-on experience with Big Data technologies like Hadoop, Hive, and Kafka, focusing on performance optimization.',
       achievements: [
-        'Learned and applied big data concepts in real-world scenarios',
-        'Gained hands-on experience with Apache ecosystem tools',
-        'Participated in data engineering training programs',
-        'Assisted in data integration and processing projects'
+        'Developed a POC to flatten large machine-generated JSON/XML files, reducing transformation time by 150%.',
+        'Collaborated with senior developers on data engineering best practices and optimization strategies.',
+        'Worked on real-world Big Data challenges using the Hadoop ecosystem.'
       ]
     },
     {
       id: 3,
-      role: 'Full-stack Developer',
-      company: 'Freelance',
-      duration: 'Aug 2020 - Present',
+      role: 'Backend Developer Intern',
+      company: 'Mentorsity',
+      duration: 'Mar 2021 - May 2021',
       location: 'Kolkata, West Bengal, India',
-      description: 'Developed web applications using modern JavaScript frameworks and libraries.',
+      description: 'Worked on backend systems using Node.js with a microservice architecture and MongoDB for database solutions.',
       achievements: [
-        'Built responsive web applications using React.js, Node.js and other frameworks',
-        'Created custom client solutions for various business needs',
-        'Implemented database designs and integrations using SQL',
-        'Managed projects from requirements gathering to deployment'
+        'Designed RESTful APIs ensuring modularity, scalability, and 100% availability.',
+        'Built efficient data models and handled CRUD operations with MongoDB.',
+        'Collaborated with the frontend engineering team to ensure seamless API integration.'
       ]
     },
     {
       id: 4,
-      role: 'Back End Developer (Node.js)',
-      company: 'Mentorsity',
-      duration: 'Mar 2021 - May 2021',
-      location: 'Internship',
-      description: 'Worked on backend development using Node.js, with experience in Git and SQL.',
+      role: 'Full-stack Developer',
+      company: 'Freelance',
+      duration: 'Aug 2020 - Oct 2022',
+      location: 'Kolkata, West Bengal, India',
+      description: 'Developed responsive web applications as a freelancer using modern JavaScript frameworks and cloud solutions.',
       achievements: [
-        'Developed RESTful APIs using Node.js and Express',
-        'Implemented database models and queries',
-        'Collaborated with frontend developers for seamless integration',
-        'Participated in code reviews and followed Git workflow'
+        'Worked as a freelancer on Fiver and freelance.com, delivering projects on time.',
+        'Built full-stack web apps using React.js, Node.js, Express.js, and MongoDB.',
+        'Implemented scalable backend services and intuitive frontend designs.',
+        'Managed end-to-end project delivery from requirements gathering to deployment.'
       ]
-    },
+    }
   ];
 
   return (
@@ -103,7 +100,7 @@ const ExperienceSection = () => {
             A track record of success in designing and implementing data solutions that drive business value.
           </p>
         </div>
-        
+
         <div className="space-y-12 max-w-4xl mx-auto section-animate" style={{ animationDelay: '0.2s' }}>
           {experiences.map((exp, index) => (
             <div key={exp.id} className={`glass-card p-8 hover:shadow-lg transition-shadow ${index === 0 ? 'border-t-4 border-t-azure-500' : ''}`}>
@@ -122,12 +119,12 @@ const ExperienceSection = () => {
                     <span className="text-sm font-semibold">{exp.role}</span>
                   </div>
                 </div>
-                
+
                 <div className="md:w-2/3">
                   <p className="text-gray-300 mb-4">
                     {exp.description}
                   </p>
-                  
+
                   <div className="mt-4">
                     <h4 className="font-medium text-azure-300 flex items-center mb-3">
                       <Lightbulb className="h-4 w-4 mr-2" />

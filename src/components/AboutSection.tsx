@@ -51,7 +51,7 @@ const AboutSection = () => {
             
             <div className="md:w-3/5 space-y-6">
               <p className="text-lg text-gray-300">
-                With over 5 years of experience as a Data Engineer specializing in Azure Cloud technologies, I've developed a passion for designing and implementing robust data solutions that drive business value.
+                With over 3 years of experience as a Data Engineer specializing in Azure Cloud technologies, I've developed a passion for designing and implementing robust data solutions that drive business value.
               </p>
               
               <p className="text-lg text-gray-300">
@@ -100,32 +100,38 @@ const AboutSection = () => {
                 <h3 className="heading-sm mb-4 text-azure-300">Career Journey</h3>
                 <div className="relative pl-8 border-l-2 border-azure-700 space-y-8">
                   <div className="relative">
-                    <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-500"></div>
-                    <div className="mb-1 text-lg font-semibold text-gray-100">Senior Data Engineer</div>
-                    <div className="text-sm text-gray-400 mb-2">TechInnovate Inc. • 2021 - Present</div>
+                    <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-800"></div>
+                    <div className="mb-1 text-lg font-semibold text-gray-100">Programmer Analyst - Data Engineer</div>
+                    <div className="text-sm text-gray-400 mb-2">Cognizant Technology Solutions • Oct 2022 - Present</div>
                     <p className="text-gray-300">
-                      Leading the design and implementation of enterprise-scale data platforms on Azure. 
-                      Successfully delivered solutions that reduced data processing times by 60%.
-                    </p>
-                  </div>
-                  
-                  <div className="relative">
-                    <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-600"></div>
-                    <div className="mb-1 text-lg font-semibold text-gray-100">Data Engineer</div>
-                    <div className="text-sm text-gray-400 mb-2">Cognizant • 2019 - 2021</div>
-                    <p className="text-gray-300">
-                      Developed and maintained ETL processes using Azure Data Factory and Databricks for 
-                      Fortune 500 clients in the healthcare and finance sectors.
+                      Implemented a high-performance data ecosystem for a major insurance provider, slashing processing times by 40% while efficiently managing 7+ TB of data through custom Azure ODS and optimized Spark ETL solutions.
                     </p>
                   </div>
                   
                   <div className="relative">
                     <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-700"></div>
-                    <div className="mb-1 text-lg font-semibold text-gray-100">Associate Developer</div>
-                    <div className="text-sm text-gray-400 mb-2">Future Institute Of Technology • 2018 - 2019</div>
+                    <div className="mb-1 text-lg font-semibold text-gray-100">GenC Next Intern - AIAModernDataEngineering</div>
+                    <div className="text-sm text-gray-400 mb-2">Cognizant Technology Solutions • Feb 2022 - Sep 2022</div>
                     <p className="text-gray-300">
-                      Built data-driven web applications using ASP.NET and SQL Server, focusing on
-                      performance optimization and clean code practices.
+                      Accelerated machine-generated data processing by 150% through hands-on implementation of Hadoop, Hive, and Kafka while mastering data engineering best practices.
+                    </p>
+                  </div>
+                  
+                  <div className="relative">
+                    <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-600"></div>
+                    <div className="mb-1 text-lg font-semibold text-gray-100">Backend Developer Intern</div>
+                    <div className="text-sm text-gray-400 mb-2">Mentorsity • Mar 2021 - May 2021</div>
+                    <p className="text-gray-300">
+                      Built robust Node.js microservice APIs with MongoDB integration, delivering 100% availability while ensuring seamless data flow between backend systems and frontend applications.
+                    </p>
+                  </div>
+
+                  <div className="relative">
+                    <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-500"></div>
+                    <div className="mb-1 text-lg font-semibold text-gray-100">B.tech - Computer Science & Engineering</div>
+                    <div className="text-sm text-gray-400 mb-2">MAKAUT • July 2018 - Jun 2022</div>
+                    <p className="text-gray-300">
+                    Completed Bachelor of Technology in Computer Science & Engineering with a distinguished 9.10 CGPA from Future Institute of Engineering and Management, Kolkata (MAKAUT University).
                     </p>
                   </div>
                 </div>

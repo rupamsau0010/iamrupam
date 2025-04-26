@@ -141,7 +141,7 @@ const HeroSection = () => {
               <a href="#contact">Get in Touch</a>
             </Button>
             <Button asChild variant="secondary" size="lg" className="gap-2 bg-secondary hover:bg-secondary/80">
-              <a href="/resume.pdf" download>
+              <a href="Rupam_Resume_Data_Engineer_May_2025.pdf" download>
                 Download Resume <Download size={16} />
               </a>
             </Button>

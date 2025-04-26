@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { BarChart, Database, Code, Server, Cloud, Network, Link } from 'lucide-react';
+import { BarChart, Database, Code, Server, Cloud, Network, Link, Github } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 const SkillsSection = () => {
@@ -31,45 +31,47 @@ const SkillsSection = () => {
 
   const technicalSkills = [
     { name: 'Azure Databricks', value: 95 },
-    { name: 'Azure Data Factory', value: 90 },
-    { name: 'Azure Synapse Analytics', value: 85 },
-    { name: 'SQL & T-SQL', value: 95 },
-    { name: 'Python', value: 85 },
-    { name: 'Spark', value: 80 },
+    { name: 'PySpark', value: 95 },
+    { name: 'SQL & T-SQL', value: 90 },
+    { name: 'Python', value: 90 },
     { name: 'Delta Lake', value: 90 },
-    { name: 'PySpark', value: 85 },
+    { name: 'Azure Data Factory', value: 85 },
+    { name: 'Azure Synapse Analytics', value: 85 },
+    { name: 'Hadoop', value: 80 },
+    { name: 'Power BI', value: 75 },
+    { name: 'Kafka', value: 70 },
   ];
 
   const skillCategories = [
     {
-      icon: Database,
-      title: 'Data Storage',
-      skills: ['Azure SQL Database', 'Azure Cosmos DB', 'Azure Data Lake Storage', 'Azure Blob Storage'],
-    },
-    {
       icon: Code,
       title: 'Programming',
-      skills: ['Python', 'SQL', 'PySpark', 'JavaScript', 'Node.js', 'React.js'],
+      skills: ['Python', 'SQL', 'PySpark', 'Java', 'Scala', 'R', 'JavaScript', 'C++', 'C'],
+    },
+    {
+      icon: Database,
+      title: 'Data Storage',
+      skills: ['Databricks Delta Tables', 'Azure SQL Database', 'Azure Data Lake Storage Gen2', 'Azure Blob Storage', 'Azure Cosmos DB', 'Apache Kafka'],
     },
     {
       icon: Server,
-      title: 'Data Processing',
-      skills: ['Azure Data Factory', 'Azure Databricks', 'Apache Spark', 'Delta Lake'],
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics',
-      skills: ['Power BI', 'Azure Analysis Services', 'Azure Synapse Analytics', 'Data Modeling'],
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      skills: ['Azure Resource Manager', 'Azure DevOps', 'Infrastructure as Code', 'Azure Monitor'],
+      title: 'Data Processing & ETL',
+      skills: ['Azure Databricks', 'Azure Data Factory'],
     },
     {
       icon: Network,
       title: 'Big Data',
-      skills: ['Hadoop', 'Spark', 'Apache Sqoop', 'HBase', 'Data Lakes'],
+      skills: ['Hadoop', 'Spark', 'Apache Kafka', 'Apache Sqoop', 'Apache HBase'],
+    },
+    {
+      icon: BarChart,
+      title: 'Warehouse & Analytics',
+      skills: ['Power BI', 'Azure Synapse Analytics', 'Azure Fabric'],
+    },
+    {
+      icon: Github,
+      title: 'DevOps',
+      skills: ['GitHub', 'Azure DevOps', 'Azure Monitor'],
     },
   ];
   
