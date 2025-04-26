@@ -97,8 +97,8 @@ const ContactSection = () => {
                   <Mail className="h-4 w-4 text-azure-400" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-200">Email</h4>
-                  <p className="text-gray-300">rupamsau721401@gmail.com</p>
+                  <h4 className="font-medium text-azure-300">Email</h4>
+                  <p className="text-gray-300 mb-2">rupamsau721401@gmail.com</p>
                 </div>
               </div>
               
@@ -107,8 +107,8 @@ const ContactSection = () => {
                   <Phone className="h-4 w-4 text-azure-400" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-200">Phone</h4>
-                  <p className="text-gray-300">+91 - 9064869734</p>
+                  <h4 className="font-medium text-azure-300">Phone</h4>
+                  <p className="text-gray-300 mb-2">+91 - 9064869734</p>
                 </div>
               </div>
               
@@ -117,8 +117,8 @@ const ContactSection = () => {
                   <MapPin className="h-4 w-4 text-azure-400" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-200">Location</h4>
-                  <p className="text-gray-300">Kolkata, WB, India</p>
+                  <h4 className="font-medium text-azure-300">Location</h4>
+                  <p className="text-gray-300 mb-2">Kolkata, WB, India</p>
                 </div>
               </div>
             </div>
@@ -149,7 +149,7 @@ const ContactSection = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-gray-200">
+                    <label htmlFor="name" className="text-sm font-medium text-azure-300">
                       Your Name
                     </label>
                     <Input 
@@ -164,7 +164,7 @@ const ContactSection = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-gray-200">
+                    <label htmlFor="email" className="text-sm font-medium text-azure-300">
                       Email Address
                     </label>
                     <Input 
@@ -181,7 +181,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium text-gray-200">
+                  <label htmlFor="subject" className="text-sm font-medium text-azure-300">
                     Subject
                   </label>
                   <Input 
@@ -196,7 +196,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-gray-200">
+                  <label htmlFor="message" className="text-sm font-medium text-azure-300">
                     Message
                   </label>
                   <Textarea 
