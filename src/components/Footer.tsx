@@ -32,7 +32,7 @@ const Footer = () => {
             <span>by {' '}
               <a href="https://github.com/rupamsau0010" className="text-blue-500 hover:underline">Rupam</a> in 
             </span>
-            <img src="/indian-flag.svg" alt="Indian Flag" className="ml-1 h-4 w-4" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/1280px-Flag_of_India.svg.png" alt="Indian Flag" className="ml-1 h-4 w-4" />
           </div>
         </div>
       </div>
