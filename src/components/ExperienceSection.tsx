@@ -32,9 +32,33 @@ const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
+      role: 'Data Engineer (Associate)',
+      company: 'Cognizant Technology Solutions',
+      duration: 'June 2025 - Present',
+      location: 'Kolkata, West Bengal, India',
+      description: 'Driving end-to-end data engineering and L3 production operations on Azure, delivering scalable pipelines, high data quality, and efficient, cloud-native analytics solutions.',
+      achievements: {
+        development: [
+          'Driving the data engineering initiatives for a major insurance client, architecting cloud-native data solutions on Azure.',
+          'Designing and developing scalable data pipelines on Azure Databricks, processing 10+ TB of data across multiple domains, including real-time IoT streaming using Kafka and Spark Structured Streaming.',
+          'Building robust ETL/ELT frameworks with PySpark and Delta Lake that cut data processing time by 45% and significantly improve data quality.',
+          "Working closely with Data Scientists, BI Engineers, and business teams to deliver analytics-ready datasets that support key decision-making.",
+          'Implementing DataOps practices—CI/CD, automated testing, and IaC with Azure DevOps—resulting in 60% faster deployment cycles.'
+        ],
+        support: [
+          'Providing L3 production support for mission-critical data platforms, maintaining 99.5% uptime for pipelines supporting 200+ downstream systems.',
+          'Leading high-priority incident resolution and root cause analysis, reducing MTTR from 4 hours to under 90 minutes.',
+          'Setting up strong data quality and anomaly-detection frameworks using ADF and Databricks, preventing issues before they reach business users.',
+          'Mentoring L1/L2 teams and creating detailed runbooks and knowledge-base documentation, improving first-call resolution by 35%.',
+          'Driving performance tuning and cost-optimization efforts that reduce compute costs by 30% while ensuring all SLAs are met.'
+        ]
+      }
+    },
+    {
+      id: 2,
       role: 'Data Engineer (Programmer Analyst)',
       company: 'Cognizant Technology Solutions',
-      duration: 'Oct 2022 - Present',
+      duration: 'Oct 2022 - June 2025',
       location: 'Kolkata, West Bengal, India',
       description: 'Contributing to large-scale data engineering initiatives for a leading property insurance provider in North America, focusing on Azure cloud technologies.',
       achievements: [
@@ -45,7 +69,7 @@ const ExperienceSection = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       role: 'Big Data Engineer Intern',
       company: 'Cognizant Technology Solutions',
       duration: 'Feb 2022 - Aug 2022',
@@ -58,7 +82,7 @@ const ExperienceSection = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       role: 'Backend Developer Intern',
       company: 'Mentorsity',
       duration: 'Mar 2021 - May 2021',
@@ -71,7 +95,7 @@ const ExperienceSection = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       role: 'Full-stack Developer',
       company: 'Freelance',
       duration: 'Aug 2020 - Oct 2022',
@@ -131,12 +155,36 @@ const ExperienceSection = () => {
                       Key Responsibilities
                     </h4>
                     <ul className="space-y-2">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start">
-                          <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2"></div>
-                          <span className="text-gray-300">{achievement}</span>
-                        </li>
-                      ))}
+                      {Array.isArray(exp.achievements) ? (
+                        exp.achievements.map((achievement: string, i: number) => (
+                          <li key={i} className="flex items-start">
+                            <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2"></div>
+                            <span className="text-gray-300">{achievement}</span>
+                          </li>
+                        ))
+                      ) : (
+                        <>
+                          <div className="mb-2 font-medium text-azure-200">Development</div>
+                          <ul className="space-y-2 mb-4">
+                            {exp.achievements.development.map((a: string, i: number) => (
+                              <li key={`dev-${i}`} className="flex items-start">
+                                <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2"></div>
+                                <span className="text-gray-300">{a}</span>
+                              </li>
+                            ))}
+                          </ul>
+
+                          <div className="mb-2 font-medium text-azure-200">Support</div>
+                          <ul className="space-y-2">
+                            {exp.achievements.support.map((a: string, i: number) => (
+                              <li key={`sup-${i}`} className="flex items-start">
+                                <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2"></div>
+                                <span className="text-gray-300">{a}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
                     </ul>
                   </div>
                 </div>

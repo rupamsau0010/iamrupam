@@ -152,7 +152,7 @@ const SkillsSection = () => {
                   <Database className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <a href="https://example.com/databricks-certified-data-engineer-professional" target="_blank" rel="noopener noreferrer">
+                  <a href="https://credentials.databricks.com/f367be13-611b-4f0f-b6e6-12dc8d388ffb#acc.wM4yUzb2" target="_blank" rel="noopener noreferrer">
                     <h4 className="font-medium text-azure-800">Databricks Certified:</h4>
                     <p className="text-sm text-gray-600">Data Engineer Professional</p>
                   </a>
@@ -167,13 +167,28 @@ const SkillsSection = () => {
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <a href="https://example.com/microsoft-certified-azure-data-engineer-associate" target="_blank" rel="noopener noreferrer">
+                  <a href="https://learn.microsoft.com/en-us/users/rupamsau-2554/credentials/e3883558545790c7?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noopener noreferrer">
                     <h4 className="font-medium text-azure-800">Microsoft Certified:</h4>
                     <p className="text-sm text-gray-600">Azure Data Engineer Associate</p>
                   </a>
                 </div>
               </div>
               <p className="text-xs text-gray-500 mt-2">Issued: Jun 2024 • Expires: Jul 2025</p>
+            </div>
+
+            <div className="border border-azure-100 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center mb-3">
+                <div className="w-10 h-10 rounded-full bg-azure-100 flex items-center justify-center mr-3">
+                  <Cloud className="h-5 w-5 text-azure-700" />
+                </div>
+                <div>
+                  <a href="https://credentials.databricks.com/6c9b8b67-3a6d-40c3-b3fd-c598ef755130#acc.ZD13OofS" target="_blank" rel="noopener noreferrer">
+                    <h4 className="font-medium text-azure-800">Databricks Certified:</h4>
+                    <p className="text-sm text-gray-600">AI Engineer Associate</p>
+                  </a>
+                </div>
+              </div>
+              <p className="text-xs text-gray-500 mt-2">Issued: Feb 2025 • Expires: Feb 2027</p>
             </div>
             
             <div className="border border-azure-100 rounded-lg p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
@@ -182,7 +197,7 @@ const SkillsSection = () => {
                   <Database className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <a href="https://example.com/databricks-certified-data-engineer-associate" target="_blank" rel="noopener noreferrer">
+                  <a href="https://credentials.databricks.com/0f42b0e6-6499-466d-8473-464290da3e0e#acc.MCazLvU8" target="_blank" rel="noopener noreferrer">
                     <h4 className="font-medium text-azure-800">Databricks Certified:</h4>
                     <p className="text-sm text-gray-600">Data Engineer Associate</p>
                   </a>
@@ -197,7 +212,7 @@ const SkillsSection = () => {
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <a href="https://example.com/microsoft-certified-azure-ai-fundamentals" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.credly.com/badges/bf5849f6-cfb8-4a85-bc7d-a7668492f3bf/public_url" target="_blank" rel="noopener noreferrer">
                     <h4 className="font-medium text-azure-800">Microsoft Certified:</h4>
                     <p className="text-sm text-gray-600">Azure AI Fundamentals</p>
                   </a>
@@ -212,7 +227,7 @@ const SkillsSection = () => {
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <a href="https://example.com/microsoft-certified-azure-data-fundamentals" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.credly.com/badges/fd1b8325-43b2-4729-b37f-0a54a09dc1e2/public_url" target="_blank" rel="noopener noreferrer">
                     <h4 className="font-medium text-azure-800">Microsoft Certified:</h4>
                     <p className="text-sm text-gray-600">Azure Data Fundamentals</p>
                   </a>
@@ -227,7 +242,7 @@ const SkillsSection = () => {
                   <Cloud className="h-5 w-5 text-azure-700" />
                 </div>
                 <div>
-                  <a href="https://example.com/microsoft-certified-azure-fundamentals" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.credly.com/badges/ad9dbde7-03ac-4d64-bc13-4bd508ff6db0/public_url" target="_blank" rel="noopener noreferrer">
                     <h4 className="font-medium text-azure-800">Microsoft Certified:</h4>
                     <p className="text-sm text-gray-600">Azure Fundamentals</p>
                   </a>

@@ -100,9 +100,18 @@ const AboutSection = () => {
                 <h3 className="heading-sm mb-4 text-azure-300">Career Journey</h3>
                 <div className="relative pl-8 border-l-2 border-azure-700 space-y-8">
                   <div className="relative">
+                    <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-900"></div>
+                    <div className="mb-1 text-lg font-semibold text-gray-100">Associate - Data Engineer</div>
+                    <div className="text-sm text-gray-400 mb-2">Cognizant Technology Solutions • Jul 2025 - Present</div>
+                    <p className="text-gray-300">
+                      Driving end-to-end data engineering and L3 production operations on Azure, delivering scalable pipelines, high data quality, and efficient, cloud-native analytics solutions.
+                    </p>
+                  </div>
+
+                  <div className="relative">
                     <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-800"></div>
                     <div className="mb-1 text-lg font-semibold text-gray-100">Programmer Analyst - Data Engineer</div>
-                    <div className="text-sm text-gray-400 mb-2">Cognizant Technology Solutions • Oct 2022 - Present</div>
+                    <div className="text-sm text-gray-400 mb-2">Cognizant Technology Solutions • Oct 2022 - Jul 2025</div>
                     <p className="text-gray-300">
                       Implemented a high-performance data ecosystem for a major insurance provider, slashing processing times by 40% while efficiently managing 7+ TB of data through custom Azure ODS and optimized Spark ETL solutions.
                     </p>
