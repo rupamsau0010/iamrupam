@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -78,6 +79,7 @@ export default {
           700: "#0369a1",
           800: "#075985",
           900: "#0c4a6e",
+          1000: "#082f49",
         },
         data: {
           50: "#f0fdfa",
@@ -175,5 +177,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

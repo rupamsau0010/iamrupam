@@ -100,9 +100,18 @@ const AboutSection = () => {
                 <h3 className="heading-sm mb-4 text-azure-300">Career Journey</h3>
                 <div className="relative pl-8 border-l-2 border-azure-700 space-y-8">
                   <div className="relative">
+                    <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-1000"></div>
+                    <div className="mb-1 text-lg font-semibold text-gray-100">Data Engineer - Level 8</div>
+                    <div className="text-sm text-gray-400 mb-2">Fractal Analytics • Jul 2026 - Present</div>
+                    <p className="text-gray-300">
+                      Modernizing data infrastructure and analytics capabilities for some of the world's leading healthcare and insurance companies, leveraging Azure Cloud to deliver high-performance, scalable data solutions.
+                    </p>
+                  </div>
+
+                  <div className="relative">
                     <div className="absolute -left-[29px] w-6 h-6 rounded-full bg-azure-900"></div>
                     <div className="mb-1 text-lg font-semibold text-gray-100">Associate - Data Engineer</div>
-                    <div className="text-sm text-gray-400 mb-2">Cognizant Technology Solutions • Jul 2025 - Present</div>
+                    <div className="text-sm text-gray-400 mb-2">Cognizant Technology Solutions • Jul 2025 - Jun 2026</div>
                     <p className="text-gray-300">
                       Driving end-to-end data engineering and L3 production operations on Azure, delivering scalable pipelines, high data quality, and efficient, cloud-native analytics solutions.
                     </p>
