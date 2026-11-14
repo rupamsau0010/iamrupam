@@ -158,7 +158,7 @@ const ExperienceSection = () => {
                       {Array.isArray(exp.achievements) ? (
                         exp.achievements.map((achievement: string, i: number) => (
                           <li key={i} className="flex items-start">
-                            <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2"></div>
+                            <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2 flex-shrink-0"></div>
                             <span className="text-gray-300">{achievement}</span>
                           </li>
                         ))
@@ -168,7 +168,7 @@ const ExperienceSection = () => {
                           <ul className="space-y-2 mb-4">
                             {exp.achievements.development.map((a: string, i: number) => (
                               <li key={`dev-${i}`} className="flex items-start">
-                                <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2"></div>
+                                <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2 flex-shrink-0"></div>
                                 <span className="text-gray-300">{a}</span>
                               </li>
                             ))}
@@ -178,7 +178,7 @@ const ExperienceSection = () => {
                           <ul className="space-y-2">
                             {exp.achievements.support.map((a: string, i: number) => (
                               <li key={`sup-${i}`} className="flex items-start">
-                                <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2"></div>
+                                <div className="w-2 h-2 rounded-full bg-azure-500 mt-1.5 mr-2 flex-shrink-0"></div>
                                 <span className="text-gray-300">{a}</span>
                               </li>
                             ))}

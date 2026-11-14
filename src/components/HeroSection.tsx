@@ -141,7 +141,7 @@ const HeroSection = () => {
                 View Projects <ArrowRight size={16} />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-azure-700/50 hover:bg-azure-900/40">
+            <Button asChild variant="outline" size="lg" className="border-azure-700/50 text-foreground hover:bg-azure-900/40 hover:text-azure-300">
               <a href="#contact">Get in Touch</a>
             </Button>
             <Button asChild variant="secondary" size="lg" className="gap-2 bg-secondary hover:bg-secondary/80">

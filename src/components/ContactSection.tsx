@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import { Mail, Phone, MapPin, Send, Linkedin, Github, Instagram, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -22,6 +23,51 @@ const ContactSection = () => {
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+
+    const { VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY } = import.meta.env;
+    if (!VITE_EMAILJS_SERVICE_ID || !VITE_EMAILJS_TEMPLATE_ID || !VITE_EMAILJS_PUBLIC_KEY) {
+      toast({
+        title: 'Email is not configured',
+        description: 'Please configure the EmailJS service, template, and public key.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      await emailjs.send(
+        VITE_EMAILJS_SERVICE_ID,
+        VITE_EMAILJS_TEMPLATE_ID,
+        {
+          sender_name: formData.name.trim(),
+          sender_email: formData.email.trim(),
+          subject: formData.subject.trim(),
+          message: formData.message.trim(),
+        },
+        VITE_EMAILJS_PUBLIC_KEY,
+      );
+
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      toast({
+        title: 'Message sent',
+        description: 'Thanks for reaching out. Your message has been sent.',
+      });
+    } catch (error) {
+      console.error('EmailJS send failed:', error);
+      toast({
+        title: 'Message could not be sent',
+        description: 'Please try again or email me directly at rupamsau721401@gmail.com.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   useEffect(() => {
@@ -124,14 +170,7 @@ const ContactSection = () => {
             <div className="glass-card p-8">
               <h3 className="heading-sm text-azure-300 mb-6">Send Me a Message</h3>
               
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const mailto = `mailto:rupamsau721401@gmail.com?cc=${encodeURIComponent(formData.email)}&subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(formData.message)}`;
-                  window.location.href = mailto;
-                }}
-                className="space-y-6"
-              >
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-azure-300">
@@ -196,8 +235,8 @@ const ContactSection = () => {
                   />
                 </div>
                 
-                <Button type="submit" className="w-full flex items-center justify-center gap-2">
-                  Send Message <Send className="h-4 w-4" />
+                <Button type="submit" disabled={isSubmitting} className="w-full flex items-center justify-center gap-2">
+                  {isSubmitting ? 'Sending...' : 'Send Message'} <Send className="h-4 w-4" />
                 </Button>
               </form>
             </div>
